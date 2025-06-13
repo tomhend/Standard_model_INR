@@ -4,7 +4,8 @@ Code base used in:
 Hendriks, Tom & Arends, Gerrit et al. "Implicit neural representations for accurate estimation of the Standard Model of white matter." Communications Biology (2025).
 https://www.nature.com/articles/s42003-025-09399-5
 
-To create an appropriate environment use the environment.yml file with conda.
+To create an appropriate environment use the environment.yml file with conda. 
+Some additional packages might be necessary to install to enable GPU compatibility with Torch.
 
 Configurable options:
 - Model: this repository only supports standard model, for (for (MSMT-)CSD see https://github.com/tomhend/MSMT-CSD_INR)
