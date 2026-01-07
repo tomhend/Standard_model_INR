@@ -2,6 +2,7 @@
 Code base used in: 
 
 Hendriks, Tom & Arends, Gerrit et al. "Implicit neural representations for accurate estimation of the Standard Model of white matter." Communications Biology (2025).
+https://www.nature.com/articles/s42003-025-09399-5
 
 To create an appropriate environment use the environment.yml file with conda.
 
