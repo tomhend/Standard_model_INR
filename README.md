@@ -1,8 +1,7 @@
 # Standard model INR
 Code base used in: 
 
-Hendriks, Tom & Arends, Gerrit et al. "Implicit neural representations for accurate estimation of the standard model of white matter." arXiv preprint arXiv:2506.15762 (2025).
-https://arxiv.org/abs/2506.15762
+Hendriks, Tom & Arends, Gerrit et al. "Implicit neural representations for accurate estimation of the Standard Model of white matter." Communications Biology (2025).
 
 To create an appropriate environment use the environment.yml file with conda.
 
