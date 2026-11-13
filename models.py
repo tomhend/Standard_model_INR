@@ -50,11 +50,16 @@ class SM_NeSH(nn.Module):
         output_size = (l_max + 1) * (l_max + 2) // 2 - 1
         input_size = lpos * 2 if gaussian else lpos * 6 + 3
 
+        layers = nn.ModuleList([])
+        for i in range(n_layers - 2):
+            layers.append(nn.Linear(hidden_dim, hidden_dim))
+            layers.append(nn.ReLU())
+
         self.mlp = nn.Sequential(
             *(
-                [nn.Linear(input_size, hidden_dim), nn.ReLU()]
-                + [nn.Linear(hidden_dim, hidden_dim), nn.ReLU()] * (n_layers - 2)
-                + [nn.Linear(hidden_dim, hidden_dim), nn.ReLU()]
+                nn.ModuleList([nn.Linear(input_size, hidden_dim), nn.ReLU()])
+                + layers
+                + nn.ModuleList([nn.Linear(hidden_dim, hidden_dim), nn.ReLU()])
             )
         )
         self.fod_head = nn.Linear(hidden_dim, output_size)
